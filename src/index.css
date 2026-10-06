@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-void: #080706;
+    --bg-primary: #0D0A08;
+    --bg-secondary: #120D0A;
+    --bg-panel: #18100C;
+    --bg-card: #100B08;
+    --border-subtle: rgba(234, 145, 98, 0.20);
+    --border-accent: rgba(234, 145, 98, 0.35);
+    --border-hover: rgba(234, 145, 98, 0.50);
+    --accent-main: #EA9162;
+    --accent-light: #F2B08E;
+    --accent-highlight: #FFD2BE;
+    --text-pure: #FFFFFF;
+    --text-primary: #F5EDE8;
+    --text-secondary: #C7B8B0;
+    --text-muted: #9F8D84;
+    --glow-subtle: rgba(234, 145, 98, 0.15);
+    --glow-medium: rgba(234, 145, 98, 0.25);
+    --glow-strong: rgba(234, 145, 98, 0.40);
+  }
+
+  body {
+    background-color: var(--bg-void);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: 'Chakra Petch', sans-serif;
+    letter-spacing: -0.01em;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-feature-settings: "tnum" 1;
+  }
+}
+
+/* Custom scrollbars for scientific panels */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080706;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(234, 145, 98, 0.25);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #EA9162;
+}
+
+/* --- Warm Stellar Galaxy & Shooting Star Keyframes for CosmicButton --- */
+
+@keyframes cosmicGalaxyRotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.15);
+    opacity: 0.85;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 0.4;
+  }
+}
+
+@keyframes shootingStarTravel {
+  0% {
+    transform: translateX(-120%) translateY(-30%) rotate(-25deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateX(280%) translateY(70%) rotate(-25deg);
+    opacity: 0;
+  }
+}
+
+@keyframes starTwinkleSubtle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes stellarAuraPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(234, 145, 98, 0.25), 0 0 50px rgba(242, 176, 142, 0.12);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(234, 145, 98, 0.45), 0 0 80px rgba(242, 176, 142, 0.25);
+  }
+}
